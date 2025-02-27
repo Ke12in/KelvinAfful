@@ -10,7 +10,7 @@
 <body>
     <a-scene>
         <!-- sky -->
-         <a-sky color="#ADD8E6" position="0 1 0"></a-sky>
+         <a-sky src="./img/clear-sunny-sky.jpg"></a-sky>
 
            <!-- Door Handle -->
          <!-- <a-sphere position="-0.8 1 4.95" radius="0.1" color="gold"></a-sphere> -->
@@ -22,8 +22,8 @@
           <a-plane src="./img/red-brick-wall_38187-33.avif"  position="0 1.9 -5" width="10" height="5" ></a-plane>
 
         <!-- ground -->
-        <a-plane src="./img/f9bdfbe6370ffa599bbf5f63d28d1bdde6114b2b8d9a157c9c78d04fed9a25af.jpg" position="0 -0.65 -0.3" rotation="-90 0 0" width="10.5" height="10" ></a-plane>
-        <!-- <a-plane src="./img/f9bdfbe6370ffa599bbf5f63d28d1bdde6114b2b8d9a157c9c78d04fed9a25af.jpg" position="0 -0.7 2.8" rotation="-90 0 0" width="10.5" height="4" ></a-plane> -->
+        <!-- <a-plane src="./img/f9bdfbe6370ffa599bbf5f63d28d1bdde6114b2b8d9a157c9c78d04fed9a25af.jpg" position="0 -0.5 0" rotation="-90 0 0" width="50" height="50" ></a-plane> -->
+        <a-plane src="./img/f9bdfbe6370ffa599bbf5f63d28d1bdde6114b2b8d9a157c9c78d04fed9a25af.jpg" position="0 -0.5 0" rotation="-90 0 0" width="50" height="50" ></a-plane>
        
         <!-- table -->
        <a-box src="./img/2ccdc50f379f91ad26fb989b6b6d00ad.jpg" position="0 0.5 -3" width="2" height="0.1" depth="1"></a-box>
@@ -37,26 +37,26 @@
        <a-cylinder position = "0.1 0.65 -3.2" color="#DACFBF" radius="0.1" height="0.3"></a-cylinder>
 
        <!-- milk tin -->
-        <a-cylinder position="-0.6 0.65 -2.8" color="sliver" radius="0.15" height="0.3"></a-cylinder>
+        <a-cylinder src="./img/Ideal-B-2-scaled.jpg" position="-0.6 0.65 -2.8"  radius="0.1" height="0.12"></a-cylinder>
         
         <!-- milo tin -->
-        <a-cylinder position="0.5 0.65 -2.8" radius="0.15" height="0.4" color="green"></a-cylinder>
+        <a-cylinder src="./img/s-l1200.jpg" position="0.5 0.65 -2.8" radius="0.15" height="0.4"></a-cylinder>
 
         <!-- Tree 1 -->
-         <a-cylinder position="-7.5 0.5 -4" radius="0.2" height="1" color="brown"></a-cylinder> 
-          <a-sphere position="-7.5 1.2 -4" radius="0.8" color="green"></a-sphere>
+         <a-cylinder position="-7.5 0.5 -4" radius="0.2" height="1.6" color="brown"></a-cylinder> 
+          <a-sphere position="-7.5 1.6 -4" radius="0.8" color="green"></a-sphere>
 
           <!-- Tree 2 -->
-         <a-cylinder position="7.5 0.5 -4" radius="0.2" height="1" color="brown"></a-cylinder> 
-         <a-sphere position="7.5 1.2 -4" radius="0.8" color="green"></a-sphere>
+         <a-cylinder position="7.5 0.5 -4" radius="0.2" height="1.6" color="brown"></a-cylinder> 
+         <a-sphere position="7.5 1.6 -4" radius="0.8" color="green"></a-sphere>
 
           <!-- Tree 3 -->
-          <a-cylinder position="-7.5 0.5 4" radius="0.2" height="1" color="brown"></a-cylinder> 
-          <a-sphere position="-7.5 1.2 4" radius="0.8" color="green"></a-sphere>
+          <a-cylinder position="-7.5 0.5 4" radius="0.2" height="1.6" color="brown"></a-cylinder> 
+          <a-sphere position="-7.5 1.6 4" radius="0.8" color="green"></a-sphere>
 
            <!-- Tree 4 -->
-           <a-cylinder position="7.5 0.5 4" radius="0.2" height="1" color="brown"></a-cylinder> 
-           <a-sphere position="7.5 1.2 4" radius="0.8" color="green"></a-sphere>
+           <a-cylinder position="7.5 0.5 4" radius="0.2" height="1.6" color="brown"></a-cylinder> 
+           <a-sphere position="7.5 1.6 4" radius="0.8" color="green"></a-sphere>
 
             <!-- Chair 1 (Front-Left) -->
             <a-box position="-1 -0.2 -1.2" width="0.6" height="0.1" depth="0.6" color="brown"></a-box>  <!-- Seat -->
@@ -89,9 +89,7 @@
                  <a-cylinder position="2.2 -0.25 -2.75" radius="0.05" height="0.5" color="black"></a-cylinder> 
                  <a-cylinder position="2.2 -0.25 -3.25" radius="0.05" height="0.5" color="black"></a-cylinder> 
 
-
-
-              
+                 <a-camera position="0 1.6 5"></a-camera>
    </a-scene>
    
 </body>
