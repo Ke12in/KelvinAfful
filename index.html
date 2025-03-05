@@ -9,21 +9,82 @@
 </head>
 <body>
     <a-scene>
-        <!-- sky -->
-         <a-sky src="./img/clear-sunny-sky.jpg"></a-sky>
+       <!-- Lighting -->
+       <a-light type="directional" position="2 4 3" intensity="1"></a-light>
+       <a-light type="ambient" color="#FFFFFF"></a-light>
+       
+       <!-- Sky & Sun -->
+       <a-sky src="./img/clear-sunny-sky.jpg"></a-sky>
+       <a-sphere position="0 8 -10" radius="1.5" color="yellow"></a-sphere>
+       
+       <!-- Birds -->
+       <a-entity animation="property: position; to: -4 7 -9; dur: 5000; loop: true">
+           <a-sphere position="4 7 -9" radius="0.2" color="black"></a-sphere>
+       </a-entity>
+       <a-entity animation="property: position; to: 6 7 -8; dur: 6000; loop: true">
+           <a-sphere position="-3 6 -8" radius="0.2" color="black"></a-sphere>
+       </a-entity>
+       
+       <!-- Left Shelf (Hollow) -->
+       <a-box position="-4.5 2 -2" rotation="0 90 0" width="1.5" height="2" depth="0.3" color="brown">
+          <a-box position="0 0 0.15" width="1.4" height="1.9" depth="0.01" color="black"></a-box> 
+            </a-box>
+            <!-- Plates (Stacked Inside Left Shelf) -->
+          <a-cylinder position="-4.2 1.6 -2.15" radius="0.2" height="0.05" color="white"></a-cylinder>
+          <a-cylinder position="-4.2 1.55 -2.15" radius="0.22" height="0.05" color="white"></a-cylinder>
+        <a-cylinder position="-4.2 1.5 -2.15" radius="0.24" height="0.05" color="white"></a-cylinder>
 
-           <!-- Door Handle -->
-         <!-- <a-sphere position="-0.8 1 4.95" radius="0.1" color="gold"></a-sphere> -->
+          <!-- Spoons (Inside Shelf) -->
+       <a-cylinder position="-4.2 2.1 -2.1" radius="0.02" height="0.3" color="white"></a-cylinder>
+        <a-sphere position="-4.2 2.25 -2.1" radius="0.05" color="white"></a-sphere>
 
-         <!-- walls -->
-          <a-plane src="./img/red-brick-wall_38187-33.avif" rotation="90 0 0" position="0 4.4 0" width="10" height="10" ></a-plane> 
-          <a-plane src="./img/red-brick-wall_38187-33.avif" rotation="0 90 0" position="-5 1.9 0" width="10" height="5" ></a-plane> 
-          <a-plane src="./img/red-brick-wall_38187-33.avif" rotation="0 -90 0" position="5 1.9 0" width="10" height="5" ></a-plane> 
-          <a-plane src="./img/red-brick-wall_38187-33.avif"  position="0 1.9 -5" width="10" height="5" ></a-plane>
+        <a-cylinder position="-4.42 2.1 -2.1" radius="0.02" height="0.3" color="white"></a-cylinder>
+        <a-sphere position="-4.42 2.25 -2.1" radius="0.05" color="white"></a-sphere>
+
+         <!-- Right Shelf (Hollow) -->
+       <a-box position="4.5 2 -2" rotation="0 90 0" width="1.5" height="2" depth="0.3" color="brown">
+        <a-box position="0 0 -0.15" width="1.4" height="1.9" depth="0.01" color="black"></a-box> 
+           </a-box>
+           <!-- Right Shelf (Hollow) -->
+          <a-box position="4.5 2 -2" rotation="0 90 0" width="1.5" height="2" depth="0.3" color="brown">
+           <a-box position="0 0 0.15" width="1.4" height="1.9" depth="0.01" color="black"></a-box> 
+         </a-box>
+
+         <!-- Plates (Stacked Inside Right Shelf) -->
+           <a-cylinder position="4.2 1.6 -2.15" radius="0.2" height="0.05" color="white"></a-cylinder>
+            <a-cylinder position="4.2 1.55 -2.15" radius="0.22" height="0.05" color="white"></a-cylinder>
+                 <a-cylinder position="4.2 1.5 -2.15" radius="0.24" height="0.05" color="white"></a-cylinder>
+
+           <!-- Spoons (Inside Right Shelf) -->
+             <a-cylinder position="4.2 2.1 -2.1" radius="0.02" height="0.3" color="white"></a-cylinder>
+           <a-sphere position="4.2 2.25 -2.1" radius="0.05" color="white"></a-sphere>
+
+           <a-cylinder position="4.42 2.1 -2.1" radius="0.02" height="0.3" color="white"></a-cylinder>
+        <a-sphere position="4.42 2.25 -2.1" radius="0.05" color="white"></a-sphere>
+
+       <!-- Existing Elements (Walls, Trees, Chairs, etc.) -->
+       <a-plane src="./img/red-brick-wall_38187-33.avif" rotation="90 0 0" position="0 4.4 0" width="10" height="10"></a-plane>
+       <a-plane src="./img/red-brick-wall_38187-33.avif" rotation="0 90 0" position="-5 1.9 0" width="10" height="5"></a-plane>
+       <a-plane src="./img/red-brick-wall_38187-33.avif" rotation="0 -90 0" position="5 1.9 0" width="10" height="5"></a-plane>
+       <a-plane src="./img/red-brick-wall_38187-33.avif" position="0 1.9 -5" width="10" height="5"></a-plane>
+
+       <!-- front wall and gate -->
+        <!-- Left Side of Front Wall -->
+           <a-plane src="./img/red-brick-wall_38187-33.avif" position="-2.5 1.9 5" width="5" height="5"></a-plane>
+
+             <!-- Right Side of Front Wall -->
+           <a-plane src="./img/red-brick-wall_38187-33.avif" position="2.5 1.9 5" width="5" height="5"></a-plane>
+
+            <!-- Gate -->
+            <a-box position="0 1.5 5" width="2" height="3" depth="0.1" color="brown"></a-box>
+
+             <!-- Gate Handles -->
+                <a-sphere position="-0.5 1.5 5.05" radius="0.1" color="gold"></a-sphere>
+             <a-sphere position="0.5 1.5 5.05" radius="0.1" color="gold"></a-sphere>
+
 
         <!-- ground -->
-        <!-- <a-plane src="./img/f9bdfbe6370ffa599bbf5f63d28d1bdde6114b2b8d9a157c9c78d04fed9a25af.jpg" position="0 -0.5 0" rotation="-90 0 0" width="50" height="50" ></a-plane> -->
-        <a-plane src="./img/f9bdfbe6370ffa599bbf5f63d28d1bdde6114b2b8d9a157c9c78d04fed9a25af.jpg" position="0 -0.5 0" rotation="-90 0 0" width="50" height="50" ></a-plane>
+        <a-plane src="./img/f9bdfbe6370ffa599bbf5f63d28d1bdde6114b2b8d9a157c9c78d04fed9a25af.jpg" position="0 -0.5 0" rotation="-90 0 0" width="50" height="50" repeat="50 50"></a-plane>
        
         <!-- table -->
        <a-box src="./img/2ccdc50f379f91ad26fb989b6b6d00ad.jpg" position="0 0.5 -3" width="2" height="0.1" depth="1"></a-box>
@@ -35,6 +96,12 @@
        <!-- cup -->
        <a-cylinder position = "-0.2.5 0.65 -3.2" color="#DACFBF" radius="0.1" height="0.3"></a-cylinder>
        <a-cylinder position = "0.1 0.65 -3.2" color="#DACFBF" radius="0.1" height="0.3"></a-cylinder>
+
+       <!-- Cup Body -->
+             <a-cylinder position="-0.2 0.65 -3.2" radius="0.12" height="0.3" color="#DACFBF" open-ended="true" ></a-cylinder>
+       <!-- Cup Handle -->
+             <a-torus position="-0.15 0.7 -3.1" radius="0.07" radius-tubular="0.015" color="#DACFBF" rotation="0 90 90"></a-torus>
+
 
        <!-- milk tin -->
         <a-cylinder src="./img/Ideal-B-2-scaled.jpg" position="-0.6 0.65 -2.8"  radius="0.1" height="0.12"></a-cylinder>
@@ -60,7 +127,7 @@
 
             <!-- Chair 1 (Front-Left) -->
             <a-box position="-1 -0.2 -1.2" width="0.6" height="0.1" depth="0.6" color="brown"></a-box>  <!-- Seat -->
-            <a-box position="-1 0.15 -1" width="0.6" height="0.7" depth="0.1" color="brown"></a-box>  <!-- Backrest -->
+            <a-box position="-1 0.15 -0.85" width="0.6" height="0.7" depth="0.1" color="brown"></a-box>  <!-- Backrest -->
             <a-cylinder position="-1.25 -0.5 -1.5" radius="0.05" height="0.5" color="black"></a-cylinder> <!-- Leg 1 -->
             <a-cylinder position="-1.25 -0.5 -1" radius="0.05" height="0.5" color="black"></a-cylinder> <!-- Leg 2 -->
             <a-cylinder position="-0.75 -0.5 -1.5" radius="0.05" height="0.5" color="black"></a-cylinder> <!-- Leg 3 -->
@@ -68,7 +135,7 @@
 
                <!-- Chair 2 (Front-Right) -->
               <a-box position="1 -0.2 -1.2" width="0.6" height="0.1" depth="0.6" color="brown"></a-box>  
-                <a-box position="1 0.1 -1.0" width="0.6" height="0.7" depth="0.1" color="brown"></a-box>  
+                <a-box position="1 0.1 -0.85" width="0.6" height="0.7" depth="0.1" color="brown"></a-box>  
                <a-cylinder position="0.75 -0.45 -1.5" radius="0.05" height="0.5" color="black"></a-cylinder> 
                 <a-cylinder position="0.75 -0.5 -1" radius="0.05" height="0.5" color="black"></a-cylinder> 
                <a-cylinder position="1.25 -0.5 -1.5" radius="0.05" height="0.5" color="black"></a-cylinder> 
